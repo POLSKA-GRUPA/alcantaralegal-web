@@ -1,0 +1,49 @@
+name: Deploy alcantaralegal.es
+
+on:
+  workflow_dispatch:
+
+# NOTA: para despliegue automático en push, registrar un runner self-hosted
+# con labels [self-hosted, linux, x64, kenyi-web] para este repo y cambiar
+# el trigger a: on: push: branches: [main]
+# Patrón idéntico a kenyialcantara-web (deploy.yml).
+
+env:
+  HOME: /root
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, x64, kenyi-web]
+    timeout-minutes: 5
+    steps:
+      - name: Pull latest code
+        run: |
+          git config --global --add safe.directory /var/www/alcantaralegal.es
+          cd /var/www/alcantaralegal.es
+          git pull origin main
+
+      - name: Rebuild Docker image
+        run: |
+          cd /var/www/alcantaralegal.es
+          docker build -t nati-webs-alcantaralegal:latest .
+
+      - name: Rolling update service
+        run: |
+          docker service update --force --image nati-webs-alcantaralegal:latest nati-webs-alcantaralegal
+
+      - name: Verify production content
+        run: |
+          set -euo pipefail
+          cd /var/www/alcantaralegal.es
+          sleep 3
+          docker ps --filter name=alcantaralegal --format '{{.Status}}'
+          for path in index.html styles.css; do
+            local_hash="$(sha256sum "$path" | awk '{print $1}')"
+            remote_hash=""
+            for attempt in $(seq 1 10); do
+              remote_hash="$(curl --fail --silent --show-error --header 'Cache-Control: no-cache' "https://alcantaralegal.es/$path?deploy=$GITHUB_SHA" | sha256sum | awk '{print $1}')"
+              test "$local_hash" = "$remote_hash" && break
+              sleep 2
+            done
+            test "$local_hash" = "$remote_hash"
+          done
