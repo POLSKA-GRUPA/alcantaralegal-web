@@ -48,10 +48,14 @@ img{max-width:100%;display:block}
 
 /* ---------- Header ---------- */
 header{position:sticky;top:0;z-index:60;background:var(--paper-dark);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 28px;max-width:var(--max);margin:0 auto;gap:18px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tinta)}
-.brand-mark{height:42px;width:auto}
-.wordmark{display:flex;flex-direction:column;line-height:1.08}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:11px 28px;max-width:var(--max);margin:0 auto;gap:18px;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tinta);white-space:nowrap;flex-shrink:0}
+.brand-mark{height:46px;width:auto}
+.brand img{height:46px;width:auto;flex-shrink:0}
+.brand .wm{display:flex;flex-direction:column;line-height:1.04;min-width:0}
+.brand .wm b{font-family:var(--serif);font-weight:700;letter-spacing:.24em;font-size:1.18rem}
+.brand .wm span{font-family:var(--grot);font-size:.56rem;letter-spacing:.28em;color:var(--tinta-suave);text-transform:uppercase;margin-top:3px;white-space:nowrap}
+.wordmark{display:flex;flex-direction:column;line-height:1.04}
 .wordmark strong{font-family:var(--grot);font-weight:600;font-size:.98rem;letter-spacing:.24em}
 .wordmark span{font-family:var(--grot);font-size:.56rem;color:var(--muted);text-transform:uppercase;letter-spacing:.26em;margin-top:4px}
 .menu{display:flex;gap:22px;align-items:center;font-family:var(--grot);font-size:.86rem;flex-wrap:wrap}

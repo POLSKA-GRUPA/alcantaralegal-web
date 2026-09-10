@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora impuesto de sucesiones 2026 | Alcántara Legal</title>
+<meta name="description" content="Calcula lo que pagarías de impuesto de sucesiones en Cataluña, Comunidad Valenciana, Galicia o Madrid (2026): hereda 300.000 € y compara las cuatro comunidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.calc{background:var(--blanco);border:1px solid var(--oro-linea);border-radius:6px;padding:34px;margin:30px 0}
+.calc .row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.calc label{display:block;font-family:var(--grot);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-suave);margin-bottom:7px}
+.calc select,.calc input{width:100%;padding:13px 14px;border:1px solid var(--oro-linea);border-radius:4px;font-family:var(--sans);font-size:1rem;background:var(--marfil);color:var(--tinta)}
+.calc select:focus,.calc input:focus{outline:2px solid var(--oro-claro)}
+.res{border-top:1px solid var(--oro-linea);margin-top:22px;padding-top:22px}
+.res .linea{display:flex;justify-content:space-between;padding:9px 0;font-size:.95rem;border-bottom:1px dashed rgba(176,138,71,.25)}
+.res .linea.total{border-bottom:none;border-top:2px solid var(--oro);margin-top:8px;padding-top:14px;font-weight:700;font-size:1.15rem}
+.res .linea.total b{font-family:var(--serif);font-size:1.9rem;color:var(--rubi)}
+table.comp{width:100%;border-collapse:collapse;margin:20px 0;font-size:.92rem;background:var(--blanco);border:1px solid var(--oro-linea)}
+table.comp th{background:var(--tinta);color:var(--marfil);padding:10px 14px;text-align:left;font-family:var(--serif)}
+table.comp td{padding:10px 14px;border-bottom:1px solid rgba(176,138,71,.25)}
+table.comp tr:last-child td{border-bottom:none}
+table.comp td.pagar{font-family:var(--grot);font-weight:700;color:var(--rubi)}
+.nota{font-size:.8rem;color:var(--tinta-suave);margin-top:14px}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="principal">
+    <a class="brand" href="../index.html">
+      <img src="../img/alcantara-cross.svg" alt="Cruz de Alcántara">
+      <span class="wm"><b>ALCÁNTARA</b><span>Extranjería · Herencias · Madrid</span></span>
+    </a>
+    <button class="menu-toggle" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+    <div class="menu" id="m">
+      <a href="../index.html#destacados">Extranjería</a>
+      <a href="index.html">Herencias</a>
+      <a href="../precios.html">Precios</a>
+      <a href="../quienes-somos.html">Nosotros</a>
+      <a class="btn sm" href="../contacto.html">Consulta gratuita</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero"><div class="container">
+  <p class="kicker">Calculadora · Impuesto de sucesiones 2026</p>
+  <h1>¿Cuánto pagarías de impuesto de sucesiones?</h1>
+  <p class="lead">Calculadora orientativa con la tarifa oficial de Cataluña (ATC), la estatal (BOE, Ley 29/1987) y las bonificaciones de Comunidad Valenciana, Galicia y Madrid. En 20 segundos, la cifra y la comparativa.</p>
+</div></section>
+
+<section class="alt"><div class="container narrow">
+  <div class="calc">
+    <div class="row">
+      <div>
+        <label>Comunidad del fallecido</label>
+        <select id="ccaa">
+          <option value="cataluna">Cataluña</option>
+          <option value="valenciana">Comunidad Valenciana</option>
+          <option value="galicia">Galicia</option>
+          <option value="madrid">Comunidad de Madrid</option>
+        </select>
+      </div>
+      <div>
+        <label>Parentesco con el fallecido</label>
+        <select id="grupo">
+          <option value="2">Hijo/a, cónyuge, padre/madre (Grupo II)</option>
+          <option value="1">Hijo/a menor de 21 años (Grupo I)</option>
+          <option value="3">Hermano/a, tío/a, sobrino/a (Grupo III)</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label>Valor neto a heredar (€) — bienes menos deudas</label>
+        <input type="number" id="base" value="300000" min="0" step="1000">
+      </div>
+      <div>
+        <label>Tu patrimonio previo (€) — afecta al coeficiente</label>
+        <select id="patr">
+          <option value="bajo">Menos de 500.000 €</option>
+          <option value="alto">Más de 500.000 €</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" onclick="calcular()" style="width:100%">Calcular</button>
+
+    <div class="res" id="res"></div>
+  </div>
+
+  <h2 style="margin-top:40px">Comparativa: heredar 300.000 € de tu madre</h2>
+  <table class="comp">
+    <tr><th>Comunidad</th><th>Regla 2026</th><th>A pagar aprox.</th></tr>
+    <tr><td>Cataluña</td><td>Tarifa 7%–32%, sin bonificación general I-II</td><td class="pagar">≈ 37.300 €</td></tr>
+    <tr><td>Comunidad Valenciana</td><td>Bonificación 99% grupos I-II</td><td class="pagar">≈ 514 €</td></tr>
+    <tr><td>Comunidad de Madrid</td><td>Bonificación 99% grupos I-II</td><td class="pagar">≈ 514 €</td></tr>
+    <tr><td>Galicia</td><td>Reducción 1.000.000 € + bonif. 99%</td><td class="pagar">0 €</td></tr>
+  </table>
+  <p class="nota">Comparativa con reducción estatal del grupo II aplicada en todos los casos y coeficiente 1,0. En Cataluña, la reducción autonómica propia puede variar la base. Úsala como foto inicial: el cálculo fino (vivienda habitual, empresa familiar, seguros, patrimonio preexistente real) lo hacemos en el despacho.</p>
+
+  <div class="lead-legal" style="margin-top:26px">
+    <p><strong>¿Quieres la cifra exacta de TU caso?</strong> Revisamos inventario, deudas, seguros y bienes con reducción especial, y te entregamos el cálculo firmado (REAF) con el importe a ingresar. Primera consulta gratuita.</p>
+  </div>
+  <div class="ctas"><a class="btn" href="../contacto.html">Cálculo exacto con el despacho</a></div>
+  <p class="src">Metodología: tarifa estatal y coeficientes, Ley 29/1987 arts. 20-22 (BOE-A-1987-28141); tarifa y coeficientes catalanes, DLeg 4/2002, red. Ley 5/2020 (ATC, vigentes 1-5-2020; salto de coeficiente en 500.000 €); bonificación Madrid 99% grupos I-II (DLeg 1/2010 art. 39.1.a); bonificación GVA 99% grupos I-II (Ley 13/1997 art. 6 bis, red. Ley 7/2021) y grupo III 25% desde 1-6-2026, 50% desde 1-6-2027 (norma GVA 2025); Galicia: escala propia grupos I-II, reducción sustitutiva de 1.000.000 € y bonificación 99% con límite de 150.000 € (DLeg 1/2011, BOE-A-2011-18161, arts. 6, 25 y 37; vivienda: 99/97/95% según valor, tope 600.000 €, art. 7.Uno.Tres); GVA grupo III: Ley 5/2025, de 30 de mayo (BOE-A-2025-11959). En Galicia la reducción autonómica sustituye a la estatal. Coeficiente estatal de 1,2 si la base supera 402.678,11 € con patrimonio en la banda superior. Revisado: septiembre 2026. Resultado orientativo, no vinculante.</p>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div><h4>Alcántara Legal</h4><p>Extranjería y herencias para peruanos en España.</p><p>Del grupo de <a href="https://alcantaratravel.com/" rel="noopener">Alcántara Travel</a>.</p><p class="foot-motto" style="font-family:var(--serif);font-style:italic;color:var(--oro-claro)">Ex clade victoria</p></div>
+    <div><h4>Herencias</h4><p><a href="index.html">Guía de herencias</a><br><a href="impuesto-sucesiones-cataluna.html">Sucesiones Cataluña</a><br><a href="impuesto-sucesiones-comunidad-valenciana.html">Sucesiones C. Valenciana</a><br><a href="impuesto-sucesiones-galicia.html">Sucesiones Galicia</a></p></div>
+    <div><h4>Extranjería</h4><p><a href="../nacionalidad-espanola-peruanos.html">Nacionalidad</a><br><a href="../reagrupacion-familiar.html">Reagrupación</a><br><a href="../arraigos.html">Arraigos</a></p></div>
+    <div><h4>Madrid</h4><p>C. de Amaniel, 3 · 28015<br>info@alcantaralegal.es</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Alcántara Legal · alcantaralegal.es</span><span><a href="../aviso-legal.html">Aviso legal</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../cookies.html">Cookies</a></span></div>
+</div></footer>
+
+<script>
+// ===== Tablas verificadas =====
+// Estatal (Ley 29/1987, art. 21.2 — BOE) [hasta, cuota, tipo_siguiente_tramo]
+const ESTATAL = [
+ [0,0,7.65],[7993.46,611.50,8.50],[15980.91,1290.43,9.35],[23968.36,2037.26,10.20],
+ [31955.81,2851.98,11.05],[39943.26,3734.59,11.90],[47930.72,4685.10,12.75],
+ [55918.17,5703.50,13.60],[63905.62,6789.79,14.45],[71893.07,7943.98,15.30],
+ [79880.52,9166.06,16.15],[119757.67,15606.22,18.70],[159634.83,23063.25,21.25],
+ [239389.13,40011.04,25.50],[398777.54,80655.08,29.75],[797555.08,199291.40,34.00]
+];
+// Cataluña (ATC, vigente desde 1-5-2020)
+const CATALUNA = [
+ [0,0,7.00],[50000,3500,11.00],[150000,14500,17.00],[400000,57000,24.00],[800000,153000,32.00]
+];
+// Galicia grupos I-II (ATRIGA, DLeg 1/2011)
+const GALICIA = [
+ [0,0,5.00],[50000,2500,7.00],[125000,7750,9.00],[300000,23500,11.00],[600000,56500,12.00]
+];
+function cuota(tabla, base){
+  for(let i=tabla.length-1;i>=0;i--){
+    const [hasta,cuota,tipo]=tabla[i];
+    if(base>hasta){return cuota+(base-hasta)*tipo/100;}
+  }
+  return 0;
+}
+const fmt = n => n.toLocaleString('es-ES',{maximumFractionDigits:0})+' €';
+const REDUCCION_II = 15956.87; // estatal, grupos I y II
+
+function calcular(){
+  const ccaa=document.getElementById('ccaa').value;
+  const grupo=parseInt(document.getElementById('grupo').value,10);
+  const base=parseFloat(document.getElementById('base').value||0);
+  const patr=document.getElementById('patr').value;
+  let lineas=[], titulo='';
+  if(ccaa==='cataluna'){
+    titulo='Cataluña';
+    const reduc = (grupo===3)?7993.46:REDUCCION_II; // grupos III-IV: 7.993,46 € (art. 20 Ley 29/1987)
+    const bl=Math.max(0,base-reduc);
+    const ci=cuota(CATALUNA,bl);
+    let coef = (grupo===3)?1.5882:(patr==='alto'?(grupo===1?1.05:1.1):1.0);
+    const ct=ci*coef;
+    lineas=[['Base imponible',fmt(base)],[`Reducción por parentesco (grupo ${grupo})`,'− '+fmt(reduc)],
+      ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa catalana)',fmt(ci)],
+      ['Coeficiente multiplicador','× '+coef.toFixed(2)],['Cuota tributaria',fmt(ct)],
+      ['Bonificación autonómica','— (no aplica grupos I-II)']];
+    var pagar=ct;
+  } else if(ccaa==='galicia'){
+    titulo='Galicia';
+    if(grupo===3){
+      const bl=Math.max(0,base-7993.46); // reducción estatal grupos III-IV (art. 20 Ley 29/1987)
+      const ci=cuota(ESTATAL,bl)*1.5882; // grupo III: escala ESTATAL (la gallega es solo grupos I-II) + coef. 1,5882
+      lineas=[['Base imponible',fmt(base)],['Reducción grupo III (estatal)','− 7.993,46 €'],
+        ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa estatal)',fmt(ci/1.5882)],
+        ['Coeficiente grupo III','× 1,5882'],['Cuota tributaria',fmt(ci)],
+        ['Bonificación general (grupo III)','No aplica']];
+      var pagar=ci;
+    } else {
+      const bl=Math.max(0,base-1000000);
+      const ci=cuota(GALICIA,bl);
+      const bonif=Math.min(ci*0.99,150000);
+      lineas=[['Base imponible',fmt(base)],['Reducción grupos I-II (Galicia)','− 1.000.000 €'],
+        ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa gallega)',fmt(ci)],
+        ['Bonificación 99%','− '+fmt(bonif)]];
+      var pagar=Math.max(0,ci-bonif);
+    }
+  } else {
+    titulo = ccaa==='valenciana'?'Comunidad Valenciana':'Comunidad de Madrid';
+    const reduc=(grupo===3)?7993.46:REDUCCION_II; // grupos III-IV: 7.993,46 € (art. 20 Ley 29/1987)
+    const bl=Math.max(0,base-reduc);
+    const ci=cuota(ESTATAL,bl);
+    let coef,bonifTxt;
+    if(grupo===3){
+      coef=1.5882;
+      const bonif = ccaa==='valenciana'?25:0; // 25% desde 1-6-2026 solo GVA
+      const ct=ci*coef;
+      lineas=[['Base imponible',fmt(base)],['Reducción por parentesco','− '+fmt(reduc)],
+        ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa estatal)',fmt(ci)],
+        ['Coeficiente grupo III','× 1,5882'],['Cuota tributaria',fmt(ct)]];
+      if(bonif){lineas.push(['Bonificación grupo III (GVA, desde 1-6-2026: 25%; 50% desde 1-6-2027)','− '+bonif+'%']);var pagar=ct*(1-bonif/100);}
+      else var pagar=ct;
+    } else {
+      coef=(patr==='alto'?1.05:1.0); // 1,05 desde 402.678,11 € (art. 22 Ley 29/1987)
+      const ct=ci*coef;
+      lineas=[['Base imponible',fmt(base)],['Reducción por parentesco (grupo '+grupo+')','− '+fmt(reduc)],
+        ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa estatal)',fmt(ci)],
+        ['Coeficiente multiplicador','× '+coef.toFixed(2)],['Cuota tributaria',fmt(ct)],
+        ['Bonificación autonómica 99%','− '+fmt(ct*0.99)]];
+      var pagar=ct*0.01;
+    }
+  }
+  let html=`<p style="font-family:var(--grot);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rubi);margin-bottom:8px">Resultado · ${titulo} · Grupo ${grupo}</p>`;
+  html+=lineas.map(l=>`<div class="linea"><span>${l[0]}</span><span>${l[1]}</span></div>`).join('');
+  html+=`<div class="linea total"><span>A pagar (orientativo)</span><b>${fmt(pagar)}</b></div>`;
+  if(grupo===1){html+=`<p class="nota">Grupo I (menor de 21): la reducción real es MAYOR — 3.990,72 € más por año que falte para los 21 (tope 47.887,20 €, estatal; art. 20 Ley 29/1987). En Galicia, la reducción de 1.000.000 € admite +100.000 €/año hasta 1.500.000 €.</p>`;}
+  html+=`<p class="nota">Sin vivienda habitual, empresa familiar ni seguros de vida en el cálculo. Si los hay, la cifra baja: pídennos el cálculo exacto.</p>
+  <a class="btn" href="../contacto.html" style="margin-top:14px">Cálculo exacto con el despacho</a>`;
+  document.getElementById('res').innerHTML=html;
+}
+// auto-calcular al cargar y si viene ?ccaa=
+const p=new URLSearchParams(location.search).get('ccaa');
+if(p&&['cataluna','valenciana','galicia','madrid'].includes(p)){document.getElementById('ccaa').value=p;}
+calcular();
+</script>
+</body>
+</html>
