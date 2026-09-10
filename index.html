@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extranjería para peruanos en España | Alcántara Legal Madrid</title>
+<meta name="description" content="Despacho de extranjería en Madrid para peruanos: nacionalidad en 2 años, reagrupación familiar, visados y arraigos. Familia peruana, 27 años en España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LegalService","name":"Alcántara Legal","alternateName":"Despacho Alcántara","description":"Extranjería para peruanos en España: nacionalidad, reagrupación familiar, visados, arraigos. Madrid y Lima.","address":{"@type":"PostalAddress","streetAddress":"C. de Amaniel, 3","addressLocality":"Madrid","postalCode":"28015","addressCountry":"ES"},"areaServed":["Madrid","España","Perú"],"knowsLanguage":["es"],"url":"https://alcantaralegal.es"}
+</script>
+<style>
+/* ================================================================
+   DESPACHO ALCÁNTARA — home definitiva
+   Estructura/efectos: titanintake · Piel: marfil·nogal·oro·rubí·plata
+   Capas: papel + grid oro + vignette · sello fantasma · marco foto
+   ================================================================ */
+:root{
+  --marfil:#F4EEE1; --marfil-2:#ECE3D0; --blanco:#FDFBF6;
+  --tinta:#171009; --tinta-suave:#4A4036;
+  --oro:#B08A47; --oro-claro:#D6BC85; --oro-pallo:#E9D9AE; --oro-linea:rgba(176,138,71,.4); --oro-fino:rgba(176,138,71,.22);
+  --rubi:#8E1F2F; --rubi-claro:#B04355; --plata:#E2E6EA;
+  --serif:"Cormorant Garamond",Georgia,serif; --grot:"Space Grotesk","Inter",sans-serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--marfil);color:var(--tinta);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* --- capas de fondo: grid dorado + grano de papel + viñeta --- */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(176,138,71,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(176,138,71,.06) 1px,transparent 1px);
+  background-size:64px 64px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background:radial-gradient(ellipse 120% 90% at 50% 0%,transparent 55%,rgba(23,16,9,.06) 100%),
+             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--oro-claro);color:var(--tinta)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+/* --- barra de progreso de lectura (oro) --- */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;
+  background:linear-gradient(90deg,var(--oro),var(--oro-claro));box-shadow:0 0 12px rgba(176,138,71,.55)}
+
+/* --- kicker heráldico --- */
+.k{font-family:var(--grot);font-size:.74rem;font-weight:500;letter-spacing:.26em;color:var(--rubi);text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.k::before,.k::after{content:"";width:26px;height:1px;background:var(--oro)}
+.k::before{content:"✦";width:auto;background:none;color:var(--oro);font-size:.8rem}
+
+/* ---------- NAV ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(244,238,225,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--oro-linea)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--oro-fino)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 28px;max-width:1180px;margin:0 auto;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px}
+.brand img{height:48px;transition:.3s}
+.brand:hover img{transform:rotate(-6deg)}
+.brand .wm{display:flex;flex-direction:column;line-height:1.04}
+.brand .wm b{font-family:var(--serif);font-weight:700;letter-spacing:.26em;font-size:1.25rem}
+.brand .wm span{font-family:var(--grot);font-size:.56rem;letter-spacing:.3em;color:var(--tinta-suave);text-transform:uppercase;margin-top:4px}
+.menu{display:flex;gap:24px;align-items:center;font-size:.88rem;font-weight:500}
+.menu a{color:var(--tinta-suave);position:relative;padding:4px 0;transition:.2s}
+.menu a::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:1.5px;background:var(--oro);transition:.25s;transform:translateX(-50%)}
+.menu a:hover{color:var(--tinta)}
+.menu a:hover::after{width:100%}
+.menu a.act{color:var(--tinta)}
+.menu a.act::after{width:100%}
+.btn{position:relative;display:inline-block;overflow:hidden;font-family:var(--grot);font-weight:600;font-size:.83rem;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--tinta);color:var(--marfil);padding:14px 30px;border-radius:2px;transition:.25s;border:1px solid var(--tinta)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:40%;height:100%;transform:skewX(-24deg);
+  background:linear-gradient(90deg,transparent,rgba(233,217,174,.5),transparent);transition:.55s}
+.btn:hover{background:var(--oro);border-color:var(--oro);color:var(--tinta);transform:translateY(-1px)}
+.btn:hover::after{left:130%}
+.btn.ghost{background:transparent;color:var(--tinta);border:1px solid var(--oro)}
+.btn.ghost:hover{background:var(--oro);color:var(--marfil)}
+.btn.sm{padding:9px 18px;font-size:.72rem}
+.burger{display:none;background:none;border:1px solid var(--oro-linea);border-radius:2px;color:var(--tinta);padding:8px 12px;font-size:1.05rem;cursor:pointer}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:100px 0 80px;overflow:hidden}
+.hero .glow{position:absolute;top:-240px;left:50%;transform:translateX(-50%);width:1150px;height:660px;
+  background:radial-gradient(closest-side,rgba(214,188,133,.4),transparent 72%);pointer-events:none}
+/* sello fantasma de plata, el favorito */
+.hero .ghost{position:absolute;right:-140px;top:-60px;width:560px;opacity:.09;pointer-events:none;mix-blend-mode:multiply;animation:ghostIn 3s ease .4s forwards;opacity:0}
+@keyframes ghostIn{to{opacity:.09}}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero .over{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--tinta-suave);margin:22px 0 4px;letter-spacing:.02em}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.7rem,5.6vw,4.5rem);line-height:1.0;margin:0 0 22px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rubi);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--oro-claro);z-index:-1;opacity:.55}
+.hero p.sub{color:var(--tinta-suave);font-size:1.13rem;max-width:52ch;margin-bottom:36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.trust{margin-top:46px;display:flex;align-items:center;gap:12px;color:var(--tinta-suave);font-size:.86rem}
+.trust::before{content:"";width:44px;height:1px;background:var(--oro)}
+/* chips flotantes */
+.chip{position:absolute;font-family:var(--grot);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(253,251,246,.9);border:1px solid var(--oro-linea);backdrop-filter:blur(8px);color:var(--tinta);
+  padding:10px 16px;border-radius:2px;box-shadow:0 12px 28px rgba(23,16,9,.12);animation:float 6s ease-in-out infinite;z-index:3}
+.chip::before{content:"+";color:var(--rubi);font-weight:700;margin-right:7px}
+.chip.c1{top:18%;left:-9%;animation-delay:.3s}
+.chip.c2{top:-18px;right:6%;animation-delay:1.4s}
+.chip.c3{bottom:5%;left:7%;animation-delay:2.5s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-11px) rotate(.4deg)}}
+/* --- panel foto: marco de oro doble + passe-partout + sello giratorio --- */
+.shot-wrap{position:relative;animation:riseIn 1.2s cubic-bezier(.2,.7,.2,1) .5s both}
+@keyframes riseIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.shot{position:relative;border:1px solid var(--oro);border-radius:3px;padding:7px;
+  background:linear-gradient(150deg,rgba(253,251,246,.75),rgba(236,227,208,.5));backdrop-filter:blur(10px);
+  box-shadow:0 44px 90px rgba(23,16,9,.24), 0 0 0 6px rgba(253,251,246,.5), 0 0 0 7px var(--oro-fino);
+  transform:perspective(1300px) rotateY(-4.5deg) rotateX(2deg);transition:.45s cubic-bezier(.2,.7,.2,1)}
+.shot:hover{transform:perspective(1300px) rotateY(0) rotateX(0)}
+.shot .bar{display:flex;gap:8px;align-items:center;padding:13px 16px 12px;border-bottom:1px solid var(--oro-fino)}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:var(--oro-fino)}
+.shot .bar i:first-child{background:var(--rubi)}
+.shot .bar em{font-style:normal;font-family:var(--grot);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tinta-suave);margin-left:10px}
+.shot .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;margin:14px;
+  border:1px solid var(--oro-linea);border-radius:2px;background:linear-gradient(rgba(253,251,246,.55),rgba(253,251,246,.55)),
+   repeating-linear-gradient(45deg,transparent 0 14px,rgba(176,138,71,.05) 14px 15px)}
+.shot .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--oro-fino);border-radius:1px;
+  filter:saturate(1.03) contrast(1.02);box-shadow:0 10px 26px rgba(23,16,9,.18)}
+.shot .ph figcaption{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--tinta-suave);margin-top:12px}
+/* sello giratorio con texto circular */
+.seal{position:absolute;right:-34px;bottom:-34px;width:118px;height:118px;z-index:4;filter:drop-shadow(0 10px 18px rgba(23,16,9,.28))}
+.seal svg{width:100%;height:100%;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.seal .core{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.seal .core img{width:44px}
+
+/* ---------- MARQUEE en banda inclinada ---------- */
+.mq-band{position:relative;transform:rotate(-1.2deg);margin:26px -30px;box-shadow:0 14px 34px rgba(23,16,9,.10)}
+.marquee{border-top:1px solid var(--oro-linea);border-bottom:1px solid var(--oro-linea);overflow:hidden;
+  background:rgba(253,251,246,.62);backdrop-filter:blur(6px)}
+.marquee .track{display:flex;gap:0;width:max-content;animation:scroll 38s linear infinite;padding:15px 0}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{font-family:var(--serif);font-size:1.08rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(23,16,9,.38);padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:26px}
+.marquee span::after{content:"✦";color:var(--oro);font-size:.7rem}
+.marquee span b{color:var(--rubi);font-weight:700}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- cabecera de sección ornamental ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:46px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.06;max-width:20ch}
+.sec-head h2 em{font-style:italic;color:var(--rubi);font-weight:500}
+.sec-head p{color:var(--tinta-suave);max-width:38ch;font-size:.98rem}
+.orn{display:flex;align-items:center;gap:14px;margin:10px 0 6px;color:var(--oro)}
+.orn::before,.orn::after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--oro));flex:1;max-width:90px}
+.orn::after{background:linear-gradient(90deg,var(--oro),transparent)}
+.orn i{font-style:normal;font-size:.85rem}
+
+/* ---------- DESTACADOS 01-04 ---------- */
+section.blk{padding:98px 0}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.feat{position:relative;border:1px solid var(--oro-linea);border-radius:3px;padding:34px 30px 30px;background:var(--blanco);
+  transition:.3s;overflow:hidden}
+/* esquinas de documento */
+.feat::before,.feat::after{content:"";position:absolute;width:18px;height:18px;border-color:var(--oro);border-style:solid;transition:.3s;opacity:.6}
+.feat::before{top:8px;left:8px;border-width:1px 0 0 1px}
+.feat::after{bottom:8px;right:8px;border-width:0 1px 1px 0}
+.feat:hover{border-color:var(--oro);transform:translateY(-4px);box-shadow:0 26px 50px rgba(23,16,9,.14)}
+.feat:hover::before,.feat:hover::after{opacity:1;width:26px;height:26px}
+.feat .num{font-family:var(--grot);font-size:3.1rem;font-weight:700;color:transparent;-webkit-text-stroke:1.4px var(--oro);line-height:1;margin-bottom:14px;transition:.3s}
+.feat:hover .num{-webkit-text-stroke-color:var(--rubi)}
+.feat h3{font-family:var(--serif);font-weight:700;font-size:1.55rem;margin-bottom:8px}
+.feat h3 small{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.02rem;color:var(--rubi);margin-top:2px}
+.feat p{color:var(--tinta-suave);font-size:.94rem;margin-bottom:16px}
+.feat .plus{display:flex;flex-wrap:wrap;gap:8px}
+.feat .plus i{font-style:normal;font-family:var(--grot);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--oro-fino);border-radius:2px;padding:6px 12px;color:var(--tinta-suave);background:var(--marfil)}
+.feat .plus i::before{content:"+ ";color:var(--rubi);font-weight:700}
+.feat a.more{display:inline-block;margin-top:20px;font-family:var(--grot);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rubi)}
+.feat a.more:hover{text-decoration:underline}
+
+/* ---------- NÚMEROS ---------- */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.num-card{position:relative;border:1px solid var(--oro-linea);border-radius:3px;padding:30px 22px;text-align:center;background:var(--blanco);overflow:hidden}
+.num-card::before{content:attr(data-ghost);position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+  font-family:var(--grot);font-weight:700;font-size:7rem;color:rgba(176,138,71,.08);pointer-events:none}
+.num-card b{display:block;font-family:var(--serif);font-size:4rem;font-weight:700;color:var(--rubi);line-height:1;position:relative}
+.num-card b::after{content:"";display:block;width:36px;height:2px;background:var(--oro);margin:10px auto 0}
+.num-card span{display:block;margin-top:12px;font-family:var(--grot);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-suave);position:relative}
+
+/* ---------- TODOS LOS TRÁMITES ---------- */
+.all-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.all{position:relative;border:1px solid var(--oro-linea);border-radius:2px;padding:20px 18px;font-family:var(--serif);font-weight:700;font-size:1.18rem;
+  display:flex;align-items:center;gap:12px;color:var(--tinta);transition:.22s;background:var(--blanco);overflow:hidden}
+.all::after{content:"→";position:absolute;right:14px;opacity:0;transform:translateX(-6px);transition:.22s;color:var(--rubi)}
+.all:hover{border-color:var(--oro);color:var(--rubi);transform:translateY(-2px);box-shadow:0 12px 26px rgba(23,16,9,.10);padding-right:38px}
+.all:hover::after{opacity:1;transform:none}
+.all em{font-style:normal;font-family:var(--grot);color:var(--oro);font-weight:700;font-size:.76rem;letter-spacing:.08em}
+
+/* ---------- CON / SIN ---------- */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.vs .col{position:relative;border-radius:3px;padding:34px;border:1px solid var(--oro-linea);background:var(--blanco)}
+.vs .col h4{font-family:var(--grot);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:20px;color:var(--tinta-suave)}
+.vs ul{list-style:none;display:grid;gap:13px}
+.vs li{display:flex;gap:11px;color:var(--tinta-suave);font-size:.95rem}
+.vs li::before{content:"—";color:var(--oro)}
+.vs .col.win{border:1px solid var(--oro);background:linear-gradient(150deg,#FFF8E4,var(--blanco) 55%);box-shadow:0 20px 44px rgba(23,16,9,.10)}
+.vs .col.win h4{color:var(--rubi)}
+.vs .col.win li{color:var(--tinta)}
+.vs .col.win li::before{content:"+";color:var(--rubi);font-weight:700}
+.vs .badge{position:absolute;top:-13px;left:26px;background:var(--rubi);color:var(--marfil);font-family:var(--grot);
+  font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:2px}
+.vs .badge::before{content:"✦ "}
+
+/* ---------- CTA FINAL ---------- */
+.final{text-align:center;padding:120px 24px;background:var(--tinta);color:var(--marfil);position:relative;overflow:hidden;border-top:2px solid var(--oro)}
+.final .ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;opacity:.07;pointer-events:none;mix-blend-mode:screen}
+.final .glow{position:absolute;bottom:-320px;left:50%;transform:translateX(-50%);width:1100px;height:600px;
+  background:radial-gradient(closest-side,rgba(214,188,133,.24),transparent 70%);pointer-events:none}
+.final h2{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.04;margin:18px 0 20px;color:var(--marfil)}
+.final h2 em{font-style:italic;color:var(--oro-claro)}
+.final p{color:#CBBFA8;max-width:52ch;margin:0 auto 36px}
+.final .btn{background:var(--oro);border-color:var(--oro);color:var(--tinta)}
+.final .btn:hover{background:var(--oro-claro)}
+.final .orn{justify-content:center;margin-top:34px;color:var(--oro)}
+
+/* ---------- FOOTER ---------- */
+footer{background:#100D08;border-top:1px solid rgba(176,138,71,.25);padding:56px 0 24px;font-size:.88rem;color:#9C9078;position:relative}
+footer::before{content:"";position:absolute;top:6px;left:28px;right:28px;height:1px;background:rgba(176,138,71,.18)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px}
+footer h4{font-family:var(--serif);color:var(--oro-claro);letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;margin-bottom:14px;font-weight:700}
+footer a{color:#C9BCA1;transition:.2s}
+footer a:hover{color:var(--oro-claro)}
+footer .crest{height:58px;margin-bottom:12px}
+footer .motto{font-family:var(--serif);font-style:italic;color:var(--oro-claro);font-size:.95rem}
+.foot-bottom{border-top:1px solid rgba(176,138,71,.22);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.75rem;letter-spacing:.03em}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero .ghost{right:-80px;width:380px}
+  .shot{transform:none}.seal{right:-10px;bottom:-24px;width:96px;height:96px}
+  .chip.c1{left:0}.chip.c2{right:0}
+  .feat-grid,.vs{grid-template-columns:1fr}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .all-grid{grid-template-columns:repeat(2,1fr)}
+  .mq-band{margin:20px 0}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:16px;padding:14px 0}
+  .menu.open{display:flex}
+  section.blk{padding:68px 0}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="img/logo-cruz.png" alt="Cruz de Alcántara">
+      <span class="wm"><b>ALCÁNTARA</b><span>Despacho de extranjería</span></span>
+    </a>
+    <button class="burger" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+    <div class="menu" id="m">
+      <a href="#destacados">Servicios</a>
+      <a href="#numeros">El despacho</a>
+      <a href="precios.html">Precios</a>
+      <a href="quienes-somos.html">Nosotros</a>
+      <a href="faq.html">FAQ</a>
+      <a class="btn sm" href="contacto.html">Consulta gratuita</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="glow"></div>
+  <img class="ghost" src="img/medallon.png" alt="" aria-hidden="true">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="k">Extranjería para peruanos en España</p>
+      <p class="over">Despacho familiar · Madrid y Lima</p>
+      <h1>Tus papeles, en manos de <em>la familia</em> que ya hizo el camino</h1>
+      <p class="sub">Nacionalidad, reagrupación, visados y arraigos — con credenciales visibles, precios por escrito y gente nuestra a ambos lados del océano.</p>
+      <div class="ctas">
+        <a class="btn" href="contacto.html">Consulta gratuita</a>
+        <a class="btn ghost" href="#destacados">Ver servicios</a>
+      </div>
+      <p class="trust">27 años en España · Del grupo de <a href="https://alcantaratravel.com/" rel="noopener" style="text-decoration:underline">Alcántara Travel</a></p>
+    </div>
+    <div class="shot-wrap">
+      <span class="chip c1">27 años en España</span>
+      <span class="chip c2">Nacionalidad en 2 años</span>
+      <span class="chip c3">Madrid · Lima</span>
+      <div class="shot">
+        <div class="bar"><i></i><i></i><i></i><em>Familia Alcántara</em></div>
+        <figure class="ph">
+          <img src="img/familia.jpg" alt="La familia Alcántara" loading="eager">
+          <figcaption>La familia Alcántara · Madrid — Lima</figcaption>
+        </figure>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs><path id="cir" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <circle cx="60" cy="60" r="58" fill="#FDFBF6" stroke="#B08A47" stroke-width="1.4"/>
+          <circle cx="60" cy="60" r="34" fill="none" stroke="#B08A47" stroke-width=".8"/>
+          <text font-family="Space Grotesk, sans-serif" font-size="9.2" letter-spacing="2.6" fill="#8E1F2F">
+            <textPath href="#cir">FAMILIA ALCÁNTARA · MADRID · LIMA · DESDE 1999 ·</textPath>
+          </text>
+        </svg>
+        <span class="core"><img src="img/logo-cruz.png" alt=""></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE en banda ============ -->
+<div class="mq-band" aria-hidden="true">
+  <div class="marquee">
+    <div class="track">
+      <span><b>Extranjería</b></span><span>Nacionalidad en 2 años</span><span><b>Reagrupación familiar</b></span><span>Visado de estudiante</span><span><b>Arraigos</b></span><span>NIE · TIE · Citas</span><span><b>Pareja de español</b></span><span>Renovaciones</span><span><b>Trámites de Perú</b></span><span>Madrid · Lima</span>
+      <span><b>Extranjería</b></span><span>Nacionalidad en 2 años</span><span><b>Reagrupación familiar</b></span><span>Visado de estudiante</span><span><b>Arraigos</b></span><span>NIE · TIE · Citas</span><span><b>Pareja de español</b></span><span>Renovaciones</span><span><b>Trámites de Perú</b></span><span>Madrid · Lima</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DESTACADOS 01-04 ============ -->
+<section class="blk" id="destacados">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="k">Servicios estrella</p>
+        <h2>Cuatro trámites que <em>cambian una vida</em></h2>
+        <div class="orn"><i>✦</i></div>
+      </div>
+      <p>Los que más le pesan a un peruano en España. Del resto nos encargamos igual.</p>
+    </div>
+    <div class="feat-grid">
+      <a class="feat rv" href="nacionalidad-espanola-peruanos.html">
+        <div class="num">01</div>
+        <h3>Nacionalidad española<small>dos años y sin perder la peruana</small></h3>
+        <p>El plazo reducido de los iberoamericanos, con el Convenio de 1958 que te deja conservar ambas.</p>
+        <div class="plus"><i>Solo prueba CCSE</i><i>Convenio doble nacionalidad</i><i>Expediente completo</i></div>
+        <span class="more">Ver nacionalidad →</span>
+      </a>
+      <a class="feat rv" href="reagrupacion-familiar.html">
+        <div class="num">02</div>
+        <h3>Reagrupación familiar<small>que tu familia llegue a tu lado</small></h3>
+        <p>Pareja, hijos o padres. El expediente bien armado desde el inicio, con los documentos de Perú en regla.</p>
+        <div class="plus"><i>Pareja e hijos</i><i>Padres a cargo</i><i>Documentos desde Lima</i></div>
+        <span class="more">Ver reagrupación →</span>
+      </a>
+      <a class="feat rv" href="visado-estudiante.html">
+        <div class="num">03</div>
+        <h3>Visado de estudiante<small>estudiar y trabajar a la vez</small></h3>
+        <p>Entra a estudiar desde el Consulado en Lima y trabaja hasta 30 horas semanales mientras te formas.</p>
+        <div class="plus"><i>Desde Lima</i><i>30 h de trabajo</i><i>TIE al llegar</i></div>
+        <span class="more">Ver visado →</span>
+      </a>
+      <a class="feat rv" href="arraigos.html">
+        <div class="num">04</div>
+        <h3>Arraigos<small>el reglamento cambió: elige bien</small></h3>
+        <p>Los cinco tipos vigentes desde 2025. Elegir el que te toca marca la diferencia entre sí y no.</p>
+        <div class="plus"><i>Sociolaboral</i><i>Social</i><i>Familiar</i><i>Socioformativo</i><i>Segunda oportunidad</i></div>
+        <span class="more">Ver arraigos →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÚMEROS ============ -->
+<section class="blk" id="numeros" style="border-top:1px solid var(--oro-linea);border-bottom:1px solid var(--oro-linea);background:var(--blanco)">
+  <div class="wrap">
+    <p class="k rv" style="margin-bottom:38px">El despacho, en números</p>
+    <div class="nums">
+      <div class="num-card rv" data-ghost="27"><b data-count="27">0</b><span>años de la familia en España</span></div>
+      <div class="num-card rv" data-ghost="02"><b data-count="2">0</b><span>países · Madrid y Lima</span></div>
+      <div class="num-card rv" data-ghost="08"><b data-count="8">0</b><span>trámites a tu disposición</span></div>
+      <div class="num-card rv" data-ghost="01"><b data-count="1">0</b><span>familia detrás de tus papeles</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TODOS LOS TRÁMITES ============ -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="k">Índice completo</p>
+        <h2>Todo lo que <em>hacemos</em></h2>
+        <div class="orn"><i>✦</i></div>
+      </div>
+      <p>Ocho trámites, un solo despacho. Entra a cada uno para ver requisitos, plazos y cómo ayudamos.</p>
+    </div>
+    <div class="all-grid rv">
+      <a class="all" href="nacionalidad-espanola-peruanos.html"><em>01</em> Nacionalidad</a>
+      <a class="all" href="reagrupacion-familiar.html"><em>02</em> Reagrupación familiar</a>
+      <a class="all" href="visado-estudiante.html"><em>03</em> Visado de estudiante</a>
+      <a class="all" href="arraigos.html"><em>04</em> Arraigos</a>
+      <a class="all" href="nie-tie-cita-previa.html"><em>05</em> NIE · TIE · Cita previa</a>
+      <a class="all" href="pareja-de-espanol.html"><em>06</em> Pareja de español</a>
+      <a class="all" href="renovaciones-larga-duracion.html"><em>07</em> Renovaciones</a>
+      <a class="all" href="tramites-peru-desde-espana.html"><em>08</em> Trámites de Perú</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CON / SIN ============ -->
+<section class="blk" style="border-top:1px solid var(--oro-linea);background:var(--blanco)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="k">Sin rodeos</p>
+        <h2>Con despacho o <em>por tu cuenta</em></h2>
+        <div class="orn"><i>✦</i></div>
+      </div>
+      <p>Sin promesas mágicas: la diferencia está en no fallar el expediente a la primera.</p>
+    </div>
+    <div class="vs rv">
+      <div class="col win">
+        <span class="badge">Nuestro camino</span>
+        <h4>Con Alcántara Legal</h4>
+        <ul>
+          <li>Revisamos tu historial antes de mover una pieza</li>
+          <li>Expediente completo a la primera presentación</li>
+          <li>Documentos de Perú gestionados desde Lima</li>
+          <li>Seguimiento de citas y plazos, sin perseguir cartas</li>
+          <li>Precio cerrado por escrito antes de empezar</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Por tu cuenta</h4>
+        <ul>
+          <li>Requisitos cambiados en 2025 que las guías viejas no cuentan</li>
+          <li>Citas que no aparecen y expedientes que caducan esperando</li>
+          <li>Documentos peruanos apostillados a medias</li>
+          <li>Errores de forma que cuestan meses</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <img class="ghost" src="img/logo-cruz-plata.png" alt="" aria-hidden="true">
+  <div class="glow"></div>
+  <p class="k" style="color:var(--oro-claro)">Empieza hoy</p>
+  <h2>Cuéntanos tu caso.<br><em>La primera consulta es gratis.</em></h2>
+  <p>Te decimos qué se puede hacer en tu situación, el plazo real y el coste. Sin compromiso.</p>
+  <a class="btn" href="contacto.html">Escribir al despacho</a>
+  <div class="orn"><i>✦</i></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="crest" src="img/logo-cruz-plata.png" alt="Cruz de Alcántara">
+        <h4>Despacho Alcántara</h4>
+        <p style="margin-bottom:8px">Extranjería para peruanos en España.</p>
+        <p>Del mismo grupo familiar que <a href="https://alcantaratravel.com/" rel="noopener">Alcántara Travel &amp; Services</a>.</p>
+        <p class="motto">Ex clade victoria</p>
+      </div>
+      <div><h4>Servicios</h4><p><a href="nacionalidad-espanola-peruanos.html">Nacionalidad</a><br><a href="reagrupacion-familiar.html">Reagrupación</a><br><a href="visado-estudiante.html">Visado estudiante</a><br><a href="arraigos.html">Arraigos</a><br><a href="nie-tie-cita-previa.html">NIE · TIE · Citas</a></p></div>
+      <div><h4>Madrid</h4><p>C. de Amaniel, 3 · 28015<br>WhatsApp: 695 12 45 00 (provisional)<!-- TODO-CONFIRMAR teléfono propio --><br>info@alcantaralegal.es <!-- TODO-CONFIRMAR email --></p></div>
+      <div><h4>Lima</h4><p>Los Olivos: Av. C. A. Salaverry 3723, of. 303<br>Centro: Av. República de Chile 271, of. 502</p></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Despacho Alcántara · alcantaralegal.es · Revisado: septiembre 2026</span>
+      <span><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+// contadores
+const co = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, end = +el.dataset.count; let t0 = null;
+  const step = ts => { if(!t0) t0 = ts; const p = Math.min((ts-t0)/1400, 1);
+    el.textContent = Math.floor(end * (1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); };
+  requestAnimationFrame(step); co.unobserve(el);
+}), {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+// barra de progreso dorada
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  document.getElementById('prog').style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, {passive:true});
+</script>
+</body>
+</html>

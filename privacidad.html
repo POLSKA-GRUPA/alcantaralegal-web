@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad | Alcántara Legal</title>
+<meta name="description" content="Política de privacidad de Alcántara Legal: cómo tratamos los datos del formulario y de WhatsApp, con qué fin, cuánto tiempo y cómo ejercer tus derechos.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Fragment+Mono&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><nav class="nav" aria-label="principal">
+  <a class="brand" href="index.html">
+      <img class="brand-mark" src="img/logo-cruz.png" alt="Cruz de Alcántara">
+      <span class="wordmark"><strong>ALCÁNTARA</strong><span>Despacho de extranjería · Madrid</span></span>
+    </a>
+  <button class="menu-toggle" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+  <div class="menu" id="m"><a href="nacionalidad-espanola-peruanos.html">Nacionalidad</a><a href="reagrupacion-familiar.html">Reagrupación</a><a href="visado-estudiante.html">Visado estudiante</a><a href="arraigos.html">Arraigos</a><a href="precios.html">Precios</a><a href="quienes-somos.html">Nosotros</a><a href="faq.html">FAQ</a><a class="btn sm" href="contacto.html">Consulta gratuita</a></div>
+</nav></header>
+<section class="hero"><div class="container"><p class="kicker">Información legal</p><h1>Política de privacidad</h1></div></section>
+<section class="alt"><div class="container narrow"><h2>Responsable</h2>
+<p><!-- TODO-CONFIRMAR: razón social y NIF definitivos --> · Alcántara Legal · C. de Amaniel 3, 28015 Madrid · info@alcantaralegal.es</p>
+<h2>Qué datos tratamos y para qué</h2>
+<p>Tratamos los datos que nos envías por el formulario o WhatsApp (nombre, teléfono, email y la descripción de tu caso) con la única finalidad de responder a tu consulta y, si nos lo pides, elaborar un presupuesto. Base jurídica: tu consentimiento y la relación precontractual.</p>
+<h2>Conservación y destinatarios</h2>
+<p>Conservamos tu consulta el tiempo necesario para resolverla y, si hay encargo, durante los plazos legales aplicables. No cedemos datos a terceros salvo obligación legal.</p>
+<h2>Tus derechos</h2>
+<p>Puedes ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a info@alcantaralegal.es. También puedes reclamar ante la AEPD (aepd.es).</p>
+<p class="src">Revisado: septiembre 2026</p></div></section>
+<footer><div class="container">
+  <div class="foot-grid">
+    <div>
+        <img class="foot-crest" src="img/logo-cruz-plata.png" alt="Cruz de Alcántara">
+        <h4>Despacho Alcántara</h4>
+        <p>Extranjería para peruanos en España. Una familia, dos países.</p>
+        <p class="foot-motto">Ex clade victoria</p>
+        <p style="margin-top:10px">Del mismo grupo familiar que <a href="https://alcantaratravel.com/" rel="noopener">Alcántara Travel &amp; Services</a>.</p>
+      </div>
+    <div><h4>Servicios</h4><p><a href="nacionalidad-espanola-peruanos.html">Nacionalidad</a><br><a href="reagrupacion-familiar.html">Reagrupación familiar</a><br><a href="visado-estudiante.html">Visado de estudiante</a><br><a href="arraigos.html">Arraigos</a></p></div>
+    <div><h4>Madrid</h4><p>C. de Amaniel, 3 · 28015 Madrid<br>WhatsApp: 695 12 45 00 (provisional)</p></div>
+    <div><h4>Lima</h4><p>Av. C. A. Salaverry 3723, of. 303 (Los Olivos)<br>Av. República de Chile 271, of. 502 (Centro)</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Despacho Alcántara · alcantaralegal.es · Revisado: septiembre 2026</span><span><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></span></div>
+</div></footer>
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('section .cards .card, section table, section details, section .checks').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+</script>
+</body>
+</html>
