@@ -2,7 +2,13 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<meta property="og:title" content="Calculadora impuesto de sucesiones 2026">
+<meta property="og:description" content="Calcula lo que pagarías de impuesto de sucesiones en Cataluña, Comunidad Valenciana, Galicia o Madrid (2026): hereda 300.000 € y compara las cuatro comunid">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alcantaralegal.es/herencias/calculadora.html">
+<meta property="og:image" content="https://alcantaralegal.es/../img/kenyi-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://alcantaralegal.es/herencias/calculadora.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="../img/favicon-64.png">
@@ -106,7 +112,7 @@ table.comp td.pagar{font-family:var(--grot);font-weight:700;color:var(--rubi)}
     <p><strong>¿Quieres la cifra exacta de TU caso?</strong> Revisamos inventario, deudas, seguros y bienes con reducción especial, y te entregamos el cálculo firmado (REAF) con el importe a ingresar. Primera consulta gratuita.</p>
   </div>
   <div class="ctas"><a class="btn" href="../contacto.html">Cálculo exacto con el despacho</a></div>
-  <p class="src">Metodología: tarifa estatal y coeficientes, Ley 29/1987 arts. 20-22 (BOE-A-1987-28141); tarifa y coeficientes catalanes, DLeg 4/2002, red. Ley 5/2020 (ATC, vigentes 1-5-2020; salto de coeficiente en 500.000 €); bonificación Madrid 99% grupos I-II (DLeg 1/2010 art. 39.1.a); bonificación GVA 99% grupos I-II (Ley 13/1997 art. 6 bis, red. Ley 7/2021) y grupo III 25% desde 1-6-2026, 50% desde 1-6-2027 (norma GVA 2025); Galicia: escala propia grupos I-II, reducción sustitutiva de 1.000.000 € y bonificación 99% con límite de 150.000 € (DLeg 1/2011, BOE-A-2011-18161, arts. 6, 25 y 37; vivienda: 99/97/95% según valor, tope 600.000 €, art. 7.Uno.Tres); GVA grupo III: Ley 5/2025, de 30 de mayo (BOE-A-2025-11959). En Galicia la reducción autonómica sustituye a la estatal. Coeficiente estatal de 1,2 si la base supera 402.678,11 € con patrimonio en la banda superior. Revisado: septiembre 2026. Resultado orientativo, no vinculante.</p>
+  <p class="src">Metodología: tarifa estatal y coeficientes, Ley 29/1987 arts. 20-22 (BOE-A-1987-28141); tarifa y coeficientes catalanes, DLeg 4/2002, red. Ley 5/2020 (ATC, vigentes 1-5-2020; salto de coeficiente en 500.000 €); bonificación Madrid 99% grupos I-II (DLeg 1/2010 art. 39.1.a); bonificación GVA 99% grupos I-II (Ley 13/1997 art. 6 bis, red. Ley 7/2021) y grupo III 25% desde 1-6-2026, 50% desde 1-6-2027 (norma GVA 2025); Galicia: escala propia grupos I-II, reducción sustitutiva de 1.000.000 € y bonificación 99% con límite de 150.000 € (DLeg 1/2011, BOE-A-2011-18161, arts. 6, 25 y 37; vivienda: 99/97/95% según valor, tope 600.000 €, art. 7.Uno.Tres); GVA grupo III: Ley 5/2025, de 30 de mayo (BOE-A-2025-11959). En Galicia la reducción autonómica sustituye a la estatal. Coeficiente estatal de 1,05 con patrimonio entre 402.678,11 € y ~2 M€ con patrimonio en la banda superior. Revisado: septiembre 2026. Resultado orientativo, no vinculante.</p>
 </div></section>
 
 <footer><div class="container">
@@ -158,7 +164,7 @@ function calcular(){
     const reduc = (grupo===3)?7993.46:REDUCCION_II; // grupos III-IV: 7.993,46 € (art. 20 Ley 29/1987)
     const bl=Math.max(0,base-reduc);
     const ci=cuota(CATALUNA,bl);
-    let coef = (grupo===3)?1.5882:(patr==='alto'?(grupo===1?1.05:1.1):1.0);
+    let coef = (grupo===3)?1.5882:(patr==='alto'?1.1:1.0);
     const ct=ci*coef;
     lineas=[['Base imponible',fmt(base)],[`Reducción por parentesco (grupo ${grupo})`,'− '+fmt(reduc)],
       ['Base liquidable',fmt(bl)],['Cuota íntegra (tarifa catalana)',fmt(ci)],
